@@ -39,10 +39,13 @@ const App = ()=> {
           <button type="submit" className="btn-submit">{isEditing?'edit':'submit'}</button>
         </div>
       </form>
+      {list.length > 0 &&( 
       <div className="grocery-container">
         <List items={list}/>
+        <button className="btn-clear" onClick={()=>setList([])}>clear items</button>
       </div>
-      <button className="btn-clear" onClick={()=>setList([])}>clear items</button>
+      )}
+      
     </section>
   );
 }
