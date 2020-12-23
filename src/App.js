@@ -19,7 +19,7 @@ const App = ()=> {
       //deal with edit
     }else{
       const newItem = {id: new Date().getTime().toString(), title: name};
-      setList(...list, newItem);
+      setList([ ...list, newItem]);
       setName('');
     }
   }
