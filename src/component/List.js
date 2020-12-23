@@ -3,13 +3,12 @@ import {FaEdit, FaTrash} from 'react-icons/fa';
 
  const List = ({items}) => {
     const deleteItem = (id) =>{
-        
+
     }
     return (
         <div className="grocery-list">
            
              {items.map((item) =>{
-              
                 return(
                     <article key={item.id} className="grocery-item">
                         <p className="title">{item.title}</p>
