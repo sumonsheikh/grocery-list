@@ -2,16 +2,26 @@ import React, {useState, useEffect} from 'react';
 import Alert from './component/Alert';
 import List from './component/List';
 
-function App() {
+const App = ()=> {
+
   const [name, setName]           = useState('');
   const [list, setList]           = useState([]);
   const [isEditing, setIsEditing] = useState(false);
   const [editId, setEditId]       = useState(null);
   const [alert, setAlert]         = useState({show:false, msg:'', type:''});
+
   //handle form submit
   const handleSubmit = (e) =>{
     e.preventDefault();
-    console.log('hello');
+    if(!name){
+      //display alert
+    }else if(name && isEditing){
+      //deal with edit
+    }else{
+      const newItem = {id: new Date().getTime().toString(), title: name};
+      setList(...list, newItem);
+      setName('');
+    }
   }
   return (
     <section className="section-center">
@@ -30,11 +40,12 @@ function App() {
         </div>
       </form>
       <div className="grocery-container">
-        <List/>
+        <List items={list}/>
       </div>
-      <button className="btn-clear">clear items</button>
+      <button className="btn-clear" onClick={()=>setList([])}>clear items</button>
     </section>
   );
 }
-
 export default App;
+
+
