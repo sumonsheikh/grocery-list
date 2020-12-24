@@ -6,7 +6,31 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.section-center{
+  width: 550px;
+  height: 100vh;
+  margin:10px auto;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0 , 0.2);
+  padding-top:10px;
+}
+.alert{
+  width:300px;
+  text-align: center;
+  margin:0 auto;
+  padding:0px 10px;
+  border-radius: 5px;
+}
+.alert-success{
+  background:#8DE4AF;
+}
+.alert-danger{
+  background: #FAB3C4;
+}
+.grocery-form h3{
+  padding: 10px;
+  margin-top: 20px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

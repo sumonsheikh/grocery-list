@@ -22,6 +22,7 @@ const App = ()=> {
       const newItem = {id: new Date().getTime().toString(), title: name};
       setList([ ...list, newItem]);
       setName('');
+      setAlert({show:true, msg:'Item addes succesfully to the list', type:'success'})
     }
   }
   return (
