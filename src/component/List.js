@@ -1,7 +1,7 @@
 import React from 'react';
 import {FaEdit, FaTrash} from 'react-icons/fa';
 
- const List = ({items,removeItem}) => {
+ const List = ({items,removeItem,editItem}) => {
    
     return (
         <div className="grocery-list">
@@ -11,7 +11,7 @@ import {FaEdit, FaTrash} from 'react-icons/fa';
                     <article key={item.id} className="grocery-item">
                         <p className="title">{item.title}</p>
                         <div className="btn-container">
-                            <button type="submit" className="btn-edit">
+                            <button type="submit" className="btn-edit" onClick={()=>editItem(item.id)}>
                                 <FaEdit/>
                             </button>
                             <button type="submit" className="btn-delete" onClick={()=>removeItem(item.id)}>
