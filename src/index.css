@@ -82,6 +82,8 @@ input:-moz-placeholder { text-align:left; }
 }
 .title{
   font-size: 1rem;
+  font-weight: 500;
+  color: #181818;
 
 }
 .btn-edit,.btn-delete,.btn-clear{
